@@ -1,18 +1,26 @@
-body{
-  background: lavender;
-  text-align: center;
-  background-image: url('pinkflowers.gif');
-  background-repeat: no-repeat;
-  background-size: 100% 800px;
+html {
+  background: url('pinkflowers.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-  color: rgba(255,229,0,255);
+#main{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+
 }
-h3{
-  margin-top: 40px;
+#mainBody{
+  background-color: inherit;
+  text-align: center;
 }
+
 .message{
   border: 3px solid pink;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   width: 40%;
 }
 .icon{
@@ -21,28 +29,54 @@ h3{
 span{
   display: block;
 }
+#list{
+    background-color: rgba(255,255,255, .3)!important;
+    border: 1px solid rgba(255,229,0,255);
+
+}
+img{
+  width: 60%;
+}
 #one{
+  /* grid-column: 1; */
+  grid-row: 1;
+  margin-top: 23%;
+  margin-right: 5%;
 /* position: absolute;
 top: 0px;
 left: 45px; */
 
-width: 50%;
-display: inline-block;
-height: 800px
+/* width: 50%;
+display: inline-block; */
+/* height: 800px */
 }
 .message{
 background-color: rgba(200,144,135,255);
 
 }
+form{
+  border: 1px solid rgba(255,229,0,255);
+  background-color: rgba(255,255,255, .3);
+  padding: 2%;
+}
 #two{
+  /* grid-column: 2; */
+  grid-row: 1;
+  margin-top: 45%;
+
+
+  /* width: 30%; */
   /* position: absolute;
   bottom: 180px;
   right: 85px; */
 
-  width: 45%;
-  height: 800px;
-  display: inline-block;
-  margin-top: 15%;
+  /* width: 45%; */
+  /* height: 800px; */
+  /* display: inline-block;
+  margin-top: 15%; */
+}
+#three{
+
 }
 #formFile{
   background-color: rgba(186,169,153,255);
@@ -61,6 +95,6 @@ button{
 
 }
 #post{
-  margin-top: 5%;
+  /* margin-top: 5%; */
   color: rgba(255,229,0,255);
 }
