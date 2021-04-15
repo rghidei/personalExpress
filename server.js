@@ -1,22 +1,22 @@
 const express = require('express')
 const upload = require('express-fileupload')
 const app = express()
+require('dotenv').config()
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
+const DB_URL = process.env.DB_URL
+const DB_NAME = process.env.DB_NAME
+const PORT = process.env.PORT || 3000
 
 var db, collection;
 
-const url = "mongodb+srv://rodasghidei:willow@cluster0.oltxa.mongodb.net/flowers?retryWrites=true&w=majority";
-const dbName = "flowers";
-
-app.listen(3000, () => {
-  console.log('love')
-    MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
+app.listen(PORT, () => {
+    MongoClient.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
         if(error) {
             throw error;
         }
-        db = client.db(dbName);
-        console.log("Connected to `" + dbName + "`!");
+        db = client.db(DB_NAME);
+        console.log("Connected to `" + DB_NAME + "`!");
     });
 });
 
